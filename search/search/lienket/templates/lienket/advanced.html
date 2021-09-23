@@ -1,0 +1,37 @@
+{% extends "lienket/layout.html" %}
+<!-- {% load static %} -->
+
+{% block body %}
+<a href="{% url 'index' %}" >Google</a>
+    <h1>Google Advanced</h1>
+    <form class="as" action="https://www.google.com/advanced_search">
+        <table>
+            <thead>
+                <th>Search pages have</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>all these words: </td>
+                    <td><input id="ad" type="text" name="q"></td>
+                </tr>
+                <tr>
+                    <td>this exact word or phrase: </td>
+                    <td><input id="ad" type="text" name="q"></td>
+                </tr>
+                <tr>
+                    <td>any of these words: </td>
+                    <td><input id="ad" type="text" name="q"></td>
+                </tr>
+                <tr>
+                    <td>any of these words: </td>
+                    <td><input id="ad" type="text" name="q"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input id="sm" type="submit" value="Search"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+{% endblock %}

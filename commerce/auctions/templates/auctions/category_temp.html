@@ -1,0 +1,25 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div>
+        <h2 id="hi" >Active Listings</h2>
+        {% for line in categorylist %}
+            <a href="{% url 'actionlist' line.id %}" >
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        {% if line.image_url %}
+                            <img id="imgid" src="{{ line.image_url }}" >
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-8 col-sm-6">
+                        <h4>{{ line.item_name }}</h4>
+                        <h5> Price: ${{ line.price}}</h5>
+                        <h6> {{ line.item_description}}</h6>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    
+
+{% endblock %}

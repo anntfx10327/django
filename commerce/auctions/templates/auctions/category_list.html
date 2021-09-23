@@ -1,0 +1,11 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div id="hicat">
+        <h2>Category Listings</h2>
+        {% for line in categorylist %}
+            <p><a href="{% url 'categorytemp' line %}">{{ line }}</a></p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

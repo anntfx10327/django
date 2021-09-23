@@ -1,0 +1,84 @@
+h1, .ds {
+    /* color: blue; */
+    text-align: center;
+}
+
+.navbar a, a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.fimg {
+    text-align: center;
+}
+
+.google-img {
+    margin: 10px;
+    width: auto;
+    height: 120px;
+}
+
+input[type="submit"]:hover {
+  color: black;
+  border: 1px solid #bebebe;
+}
+
+/* roi */
+input[type="submit"] {
+    color: rgb(black, black, black);
+    border: 1px solid whitesmoke;
+    margin: 4px;
+    border-radius:  4px;
+    padding: 5px 25px 5px 25px;
+    font-size: small;
+    display: inline-block;
+}
+
+.search_input {
+    color: rgb(black, black, black);
+    border: 1px solid #dbdbdb;
+    /* margin: 4px; */
+    border-radius:  50px;
+    padding: 12px 180px 12px 180px;
+    font-size: small;
+    display: inline-block;
+}
+
+.search_form {
+    text-align: center;
+    margin: 10px;
+    width: 60%;
+    position: relative;
+    display: inline-block;
+}
+
+.svg-icon.search-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+/* On hover: blue strokes */
+/* On click: thicker black strokes  */ }
+.svg-icon.search-icon:focus .search-path, .svg-icon.search-icon:hover .search-path {
+    stroke: #299ecc; }
+.svg-icon.search-icon:active .search-path {
+    stroke: #111516;
+    stroke-width: 2px; }
+
+
+.as {
+    margin-left: 25px;
+    font-size: 18px;
+    border: 5px solid white;
+}
+
+#ad {
+    margin: 5px;
+    padding: 5px 125px 5px 125px;
+}
+
+#sm {
+    margin-left: 350px;
+    color: white;
+    background-color: rgb(98, 98, 255);
+}

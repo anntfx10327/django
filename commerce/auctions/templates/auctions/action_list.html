@@ -1,0 +1,37 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Listings : {{ action.item_name }}</h2>
+    <p>{{ mess }}</p>
+    <div class="wl">
+        <form action="{% url 'actionlist' action.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" name="wlbutton" value="Watchlist">Watchlist</button>
+        </form>
+    </div>
+    <img id="imgac" src="{{ action.image_url }}" >
+    <h6> {{ action.item_description}}</h6>
+    <h5> Price: ${{ action.price }}</h5>
+    <div>
+        {% if action.is_closed %}
+            <h5>Phien da dong</h5>
+        {% else %}
+            <form action="{% url 'actionlist' action.id %}" method="POST"> 
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" name="bidnew" value="Place Bid">
+            </form>
+        {% endif %}
+    </div>
+    <h4>Details</h4>
+        <ul>
+            <li>Listed by: {{ action.seller }}</li>
+            <li>Category: {{ action.category }}</li>
+        </ul>
+        {% if user.username == action.seller and not action.is_closed %}
+            <form action="{% url 'actionlist' action.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" name="button" value="Close">Close</button>
+            </form>
+        {% endif %}
+{% endblock %}

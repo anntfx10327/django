@@ -1,0 +1,30 @@
+body {
+    padding: 10px;
+}
+
+#hi {
+    color: red;
+}
+
+
+.row {
+    color: black;
+    width: 90%;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+#imgid {
+    width: 90%;
+}
+
+#imgac {
+    width: 50%;
+    height: 50%;
+}
+
+#hicat {
+    text-align: center;
+}

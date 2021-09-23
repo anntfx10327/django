@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Listings : {{ action.item_name }}</h2>
+    <img id="imgid" src="{{ action.image_url }}" >
+    <h6> {{ action.item_description}}</h6>
+    <h5> Price: ${{ action.price }}</h5>
+    {% if action.is_closed %}
+        <h5>Phien da dong</h5>
+    {% else %}
+        {{ form }}
+        <button>Place Bid</button>
+    {% endif %}
+    <h4>Details</h4>
+        <ul>
+            <li>Listed by: {{ action.seller }}</li>
+            <li>Category: {{ action.category }}</li>
+        </ul>
+{% endblock %}

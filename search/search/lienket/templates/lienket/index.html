@@ -1,0 +1,24 @@
+{% extends "lienket/layout.html" %}
+<!-- {% load static %} -->
+
+{% block body %}
+    <!-- <a href="{% url 'image' %">Hinh anh</a>
+    <a href="{% url 'advanced' %}">Nang cao</a> -->
+    
+    <div class="navbar">
+        <a href="{% url 'image' %}">Images</a>
+        <a href="{% url 'advanced' %}">Advanced</a>
+    </div>
+
+    <!-- <h1>Google</h1> -->
+    <div class="ds">
+    <img class="google-img" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Branding Image" />
+    <br>
+    <form class="search_form" action="https://google.com/search" >
+        <svg class="svg-icon search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">A magnifying glass icon.</desc><g class="search-path" fill="none" stroke="#848F91"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+        <input class="search_input" type="text" name="q", placeholder="Search Google">
+        <br>
+        <input class="search-buttons" type="submit" value="Search" >   
+    </form>
+    </div>
+{% endblock %}

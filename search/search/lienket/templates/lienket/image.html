@@ -1,0 +1,13 @@
+{% extends "lienket/layout.html" %}
+<!-- {% load static %} -->
+
+{% block body %}
+<a href="{% url 'index'%}" >Google</a>
+    <h1>Google Image</h1>
+    <br>
+    <form class="fimg" action="https://www.google.com.vn/imghp">
+        <input class="search_input" type="text" name="q">
+        <br>
+        <input class="search-buttons" type="submit" value="Search">
+    </form>
+{% endblock %}

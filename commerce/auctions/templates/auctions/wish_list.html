@@ -1,0 +1,25 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2 id="hi" >Wish Listings</h2>
+        {% if wish %}
+            {% for line in wish %}
+                <a href="{% url 'actionlist' line.id %}" >
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6">
+                            {% if line.image_url %}
+                                <img id="imgid" src="{{ line.image_url }}" >
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-8 col-sm-6">
+                            <h4>{{ line.item_name }}</h4>
+                            <h5> Price: ${{ line.price}}</h5>
+                            <h6> {{ line.item_description}}</h6>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <h1> No Have </h1>
+        {% endif %}
+{% endblock %}
